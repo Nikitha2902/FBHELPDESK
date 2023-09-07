@@ -1,0 +1,20 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+</head>
+<body>
+    <div class="connect">
+        <div>
+            <h3>Facebook Page Ingegration</h3>
+        </div>
+        <button>
+            <a href="{% url 'chat' %}">Connect Page</a>
+        </button>
+    </div>
+</body>
+</html>

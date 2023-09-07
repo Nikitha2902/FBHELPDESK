@@ -1,0 +1,65 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FB</title>
+    <link rel="stylesheet" href="{% static 'login.css' %}">
+    <script src="main.js"></script>
+</head>
+
+<body>
+
+
+    <div>
+        <section>
+            <div class="form-box">
+                <div class="form-value">
+                    <form action="" method="post">
+                        {% csrf_token %}
+                        <h2>Create Account</h2>
+                        <div class="inputbox">
+                            <ion-icon name="mail-outline"></ion-icon>
+                            <input type="email" placeholder="Email or Phone" name="email" id="email" required>
+                            <label for="email"></label>
+                        </div>
+                        <div class="inputbox">
+                            <i class="fas fa-user"></i>
+                            <input type="text" placeholder="Username" name="username" id="username" required>
+                            <label for="username"></label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" placeholder="Password" id="password1" name="password1" required>
+                            <label for="password1"></label>
+                        </div>
+                        <div class="inputbox">
+                            <ion-icon name="lock-closed-outline"></ion-icon>
+                            <input type="password" placeholder="Confrom password" id="password2" name="password2"
+                                required>
+                            <label for="password2"></label>
+                        </div>
+                        <div class="forget">
+                            <label>
+                                <input type="checkbox"> Remember me
+                            </label>
+                        </div>
+                        <button>Sign Up</button>
+                        <div class="register">
+                            <p style="color: black;">Already have an account ?<a href="{% url 'login' %}">Login</a></p>
+                        </div> 
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div>
+
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js'></script>
+    <script src='https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js'></script>
+
+</body>
+
+</html>
